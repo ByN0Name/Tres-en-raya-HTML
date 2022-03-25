@@ -12,11 +12,11 @@
         function dibujar() {
             for(i = 0; i < 9; i++) {
                 if (estado_tablero[i] == 0)
-                    document.getElementById("celda" + i).style = "background-image: url(https://i.pinimg.com/originals/7b/0e/fc/7b0efce635bb35e5a658f2e0e1e36cb0.gif)";
+                    document.getElementById("celda" + i).style = "background-image: url(file:///home/usuario/Descargas/mario.gif)";
                 if (estado_tablero[i] == 1)
-                    document.getElementById("celda" + i).style = "background-image: url(http://pa1.narvii.com/6771/941310e29f6aec228eb3be420f8670df6378bbc8_00.gif)";
+                    document.getElementById("celda" + i).style = "background-image: url(file:///home/usuario/Descargas/cuadrado.gif)";
                 if (estado_tablero[i] == 2)
-                    document.getElementById("celda" + i).style = "background-image: url(https://pa1.narvii.com/6536/d477b3c8803c88474d5dd18d468f374f3b672f20_hq.gif)";
+                    document.getElementById("celda" + i).style = "background-image: url(file:///home/usuario/Descargas/luigi.gif)";
             }
         }
 
@@ -34,6 +34,8 @@
                 alert("Esa celda ya está seleccionada");
             }
             dibujar()
+            var estado = mostrar_mensaje(estado);
+            ganador();
         }
 
         
@@ -71,7 +73,6 @@
                 alert("Habeis empatado");
             
             }
-            ganador()
         }
     </script>
 <div id="zona-botones">
@@ -106,33 +107,3 @@
 </body>
 
 </html>
-
-*/ estilodejuego/*
-
-h3{
-    color: green;
-    font-size: 30px;
-    text-align: center;
-}
-
-.contenedor {
-    border: 3px solid black;
-    height: 800px;
-    width: 90%;
-    margin-left: 6%;
-    overflow: hidden;
-    margin-top: 25px;
-    position: relative;
-    background-color: darkgrey;
-}
-
-table {
-    margin: auto;
-    border: 5px solid purple;
-}
-
-table tr td {
-    width: 200px;
-    height: 200px;
-    border: 6px solid green;
-}
